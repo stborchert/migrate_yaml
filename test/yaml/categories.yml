@@ -1,0 +1,17 @@
+free:
+  name: Free download
+  description: Downloadable products users may download without purchasing them.
+merchandise:
+  name: Merchandise
+  description: Merchandise products (i.e. mousepads or stickers).
+norms:
+  name: Norms
+  parent: brochures
+norms_internal:
+  name: Internal norms
+  parent: norms
+norms_external:
+  name: External norms
+  parent: norms
+brochures:
+  name: Leaflets & Brochures

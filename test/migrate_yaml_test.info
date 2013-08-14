@@ -1,0 +1,5 @@
+name = Migrate yml test
+description = Test migrating data provided by YAML files.
+project = migrate_yml_test
+core = 7.x
+dependencies[] = migrate_yaml

@@ -1,0 +1,9 @@
+home:
+  link_title: Home
+  link_path: <front>
+admin:
+  link_title: Administration
+  link_path: admin
+  options:
+    attributes:
+      class: admin-link

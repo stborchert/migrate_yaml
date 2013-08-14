@@ -1,0 +1,9 @@
+name = Migrate yml
+description = Migrate data provided by YAML files.
+project = migrate_yml
+core = 7.x
+dependencies[] = classloader
+dependencies[] = migrate
+
+files[] = includes/migrate_yaml.yaml.inc
+files[] = includes/migrate_yaml.term.inc
