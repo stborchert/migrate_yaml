@@ -4,6 +4,10 @@
  * @file
  * Import terms from YAML source.
  */
+
+/**
+ * Basic migration class to import terms from YAML files.
+ */
 class YamlTermMigration extends DynamicMigration {
 
   protected $listUrl;
@@ -12,8 +16,10 @@ class YamlTermMigration extends DynamicMigration {
   /**
    * Default constructor.
    *
-   * @param string $list_url
-   *   Path to YAML source file.
+   * @param string $arguments
+   *   Associative array containing several arguments needed for the migration.
+   *   - listURL: Path to YAML source file.
+   *   - vocabulary: Machine name of vocabulary to import the terms to.
    */
   public function __construct($arguments) {
     // Always call the parent constructor first for basic setup.
@@ -30,7 +36,7 @@ class YamlTermMigration extends DynamicMigration {
     // Add a description.
     $this->description = t('Migrate data from YAML to taxonomy terms');
 
-    $item_url = $this->listUrl; # . '?id=:id';
+    $item_url = $this->listUrl;
 
     $this->map = new MigrateSQLMap($this->machineName, array(
         'id' => array(
@@ -99,7 +105,7 @@ class YamlTermMigration extends DynamicMigration {
    * @return (array|bool)
    *   List of term IDs of new terms or FALSE on failure.
    */
-  public function createStub($migration, $source_id) {
+  protected function createStub($migration, $source_id) {
     // Ignore an attempt to create a stub corresponding to "tid" 0.
     if (empty($source_id[0])) {
       return FALSE;
@@ -107,7 +113,7 @@ class YamlTermMigration extends DynamicMigration {
 
     migrate_instrument_start('YamlTermMigration::createStub');
     $vocab = taxonomy_vocabulary_machine_name_load($this->vocabulary);
-    $term = new stdClass;
+    $term = new stdClass();
     $term->vid = $vocab->vid;
     $term->name = t('Stub for term !term', array('!term' => $source_id[0]));
     taxonomy_term_save($term);

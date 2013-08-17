@@ -1,9 +1,18 @@
 home:
   link_title: Home
   link_path: <front>
+  weight: -10
 admin:
   link_title: Administration
   link_path: admin
   options:
     attributes:
       class: admin-link
+  expanded: 1
+content_admin:
+  link_title: Content
+  link_path: admin/content
+  options:
+    attributes:
+      title: Content administration
+  parent: admin

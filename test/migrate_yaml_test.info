@@ -3,3 +3,6 @@ description = Test migrating data provided by YAML files.
 project = migrate_yml_test
 core = 7.x
 dependencies[] = migrate_yaml
+
+files[] = includes/migrate_yaml_test.menu_links.inc
+files[] = includes/migrate_yaml_test.term.inc
