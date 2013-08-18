@@ -1,0 +1,8 @@
+name = Migrate yml example
+description = Example migration for data provided by YAML files.
+project = migrate_yml_example
+core = 7.x
+dependencies[] = migrate_yaml
+
+files[] = includes/migrate_yaml_example.menu_links.inc
+files[] = includes/migrate_yaml_example.term.inc

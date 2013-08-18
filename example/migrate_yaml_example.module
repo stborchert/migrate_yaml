@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Main functions for migrate_yaml_test.module.
+ * Main functions for migrate_yaml_example.module.
  */
 
 /**
  * Implements hook_init().
  */
-function migrate_yaml_test_init() {
+function migrate_yaml_example_init() {
   // We have to additionally register the yaml component.
   $loader = drupal_classloader();
   $loader->registerNamespace('Symfony\Component\Yaml', DRUPAL_ROOT . '/' . drupal_get_path('module', 'migrate_yaml') . '/lib/symfony/yaml');

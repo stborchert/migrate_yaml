@@ -4,7 +4,7 @@
  * @file
  * Import menu links from YAML source.
  */
-class YamlTestMenuLinksMigration extends YamlMenuLinksMigration {
+class YamlExampleMenuLinksMigration extends YamlMenuLinksMigration {
 
   /**
    * Default constructor.

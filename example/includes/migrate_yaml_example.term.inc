@@ -4,7 +4,7 @@
  * @file
  * Import terms from YAML source.
  */
-class YamlTestTermMigration extends YamlTermMigration {
+class YamlExampleTermMigration extends YamlTermMigration {
 
   protected $listUrl;
   protected $vocabulary;
