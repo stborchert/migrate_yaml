@@ -25,11 +25,11 @@ class YamlTermMigration extends DynamicMigration {
     // Always call the parent constructor first for basic setup.
     parent::__construct();
     if (empty($arguments['listUrl'])) {
-      throw new Exception(t('listUrl" is a required parameter for this migration.'));
+      throw new Exception(t('"listUrl" is a required parameter for this migration.'));
     }
     $this->listUrl = $arguments['listUrl'];
     if (empty($arguments['vocabulary'])) {
-      throw new Exception(t('vocabulary" is a required parameter for this migration.'));
+      throw new Exception(t('"vocabulary" is a required parameter for this migration.'));
     }
     $this->vocabulary = $arguments['vocabulary'];
 

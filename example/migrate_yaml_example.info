@@ -6,3 +6,4 @@ dependencies[] = migrate_yaml
 
 files[] = includes/migrate_yaml_example.menu_links.inc
 files[] = includes/migrate_yaml_example.term.inc
+files[] = includes/migrate_yaml_example.vocabulary.inc

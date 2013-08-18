@@ -1,0 +1,8 @@
+categories:
+  name: Category
+  machine_name: category
+  description: List of categories (hierarchical).
+  weight: 1
+product_type:
+  name: Product type
+  description: Type of product.

@@ -6,5 +6,7 @@ dependencies[] = classloader
 dependencies[] = migrate
 
 files[] = includes/migrate_yaml.yaml.inc
+files[] = plugins/destinations/vocabulary.inc
 files[] = includes/migrate_yaml.menu_links.inc
 files[] = includes/migrate_yaml.term.inc
+files[] = includes/migrate_yaml.vocabulary.inc
