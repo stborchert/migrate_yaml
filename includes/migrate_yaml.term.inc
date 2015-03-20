@@ -8,7 +8,7 @@
 /**
  * Basic migration class to import terms from YAML files.
  */
-class YamlTermMigration extends DynamicMigration {
+class YamlTermMigration extends Migration {
 
   protected $listUrl;
   protected $vocabulary;
@@ -21,9 +21,9 @@ class YamlTermMigration extends DynamicMigration {
    *   - listURL: Path to YAML source file.
    *   - vocabulary: Machine name of vocabulary to import the terms to.
    */
-  public function __construct($arguments) {
+  public function __construct($arguments = array()) {
     // Always call the parent constructor first for basic setup.
-    parent::__construct();
+    parent::__construct($arguments);
     if (empty($arguments['listUrl'])) {
       throw new Exception(t('"listUrl" is a required parameter for this migration.'));
     }
